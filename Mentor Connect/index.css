@@ -1,0 +1,1593 @@
+/* Reveal Functionality */
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* Apply custom styles to the scrollbar */
+body::-webkit-scrollbar {
+    width: 0px; /* Removed Vertical Scrollbar */
+}
+/* ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    /* UN-COMMENT BELOW 4 LINES TO MAKE WEBSITE UN-SELECTABLE */
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
+}
+
+header .container_main_for_header {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adjust values as needed */
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#logo {
+    background-color: #1F2937;
+    padding: 1.1vw;
+    margin-left: 2vw;
+}
+
+#logo p {
+    color: #D8B4FE;
+    font-size: 3vw;
+}
+
+#logo a {
+    text-decoration: none;
+}
+
+.container_top_for_header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1F2937;
+    height: 6vw;
+    padding: 0vw 2vw;
+}
+
+.navigation_right {
+    display: flex;
+    align-items: center;
+}
+
+.navigators ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navigation_right .navigators .nav_link_buttons {
+    position: relative; /* Set position relative to allow absolute positioning of pseudo-elements */
+}
+
+.navigation_right .navigators .nav_link_buttons::before,
+.navigation_right .navigators .nav_link_buttons::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #9333EA;
+    transition: width 0.3s ease;
+}
+
+.navigation_right .navigators .nav_link_buttons::before {
+    left: 0;
+}
+
+.navigation_right .navigators .nav_link_buttons::after {
+    right: 0;
+}
+
+.navigation_right .navigators .nav_link_buttons:hover::before,
+.navigation_right .navigators .nav_link_buttons:hover::after {
+    width: 100%;
+}
+
+.navigation_right .navigators ul svg {
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding-top: 0.1vw;
+    cursor: pointer;
+    max-width: 1.5vw;
+}
+
+.nav_link_buttons {
+    margin-right: 1.1vw;
+    background: transparent;
+}
+
+.nav_link_buttons a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.65vw 1vw;
+    border-radius: 10px;
+    display: block;
+    font-size: 1.1vw;
+}
+
+.login_signup_buttons button {
+    padding: 0.65vw 1vw;
+    background-color: #C084FC; /* Matching theme color */
+    border: none;
+    border-radius: 10px;
+    margin-left: 1.1vw;
+    font-size: 1.1vw;
+    color: white; /* Text color */
+    cursor: pointer;
+    transition: 0.3s ease; /* Smooth transition */
+}
+
+.login_signup_buttons button:hover {
+    background-color: #A56CFD; /* Darker shade on hover */
+    transform: translateY(-2px); /* Move button slightly upwards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+#separator_line {
+    width: 100%;
+    height: 0.08vh;
+    background-color: #fff;
+}
+
+.container_bottom_for_header {
+    background-color: #1F2937;
+    height: 2.5vw;
+    text-align: center;
+    padding: 0.7vw;
+}
+
+#live_running_updates {
+    background-color: #1F2937;
+    color: rgb(156 163 175);
+    font-size: 1.05vw;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+#menu_icon {
+    color: #D8B4FE; /* Icon color */
+    font-size: 2vw; /* Adjust icon size */
+    margin-right: 20px; /* Adjust spacing from other elements */
+    display: none;
+}
+
+.content_page_first {
+    background-color: #111827;
+    width: 100%;
+    height: 35vw;
+    display: flex;
+    flex-direction: row;
+    padding-top: 8.55vw;
+}
+
+.division_content_page_first_left {
+    width: 55%;
+    height: 25vw;
+}
+
+.division_content_page_first_left #title {
+    padding: 4vw 4vw;
+    font-size: 1.5vw;
+}
+
+.division_content_page_first_right {
+    width: 45%;
+    height: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.division_content_page_first_right img {
+    max-width: 100%;
+    height: 100%;
+    filter: brightness(0.6);
+    background: transparent;
+    z-index: 0;
+}
+
+.content_page_first .division_content_page_first_left #title {
+    color: #fff;
+    font-size: 1.5vw;
+}
+
+.content_page_first .division_content_page_first_left #title span {
+    color: #9333EA;
+}
+
+.content_page_first .division_content_page_first_left #title #h_2 {
+    margin-top: 1.5vw;
+    color: #fff;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.content_page_first .division_content_page_first_left #title p {
+    margin-top: 2vw;
+    color: rgb(156 163 175);
+    font-size: 1.2vw;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6vw;
+}
+
+.content_page_second {
+    background-color: #111827;
+    /* background-color: green; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vw;
+}
+
+.heading_as_separator {
+    background: transparent;
+    width: 100% ;
+    height: 3vw;
+}
+
+.heading_as_separator #h_1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: transparent;
+    width: 100%;
+    height: 2.5vw;
+    font-size: 2vw;
+    justify-content: center;
+    margin-top: 0.5vw;
+    color: #9333EA;
+}
+
+#recommendation_cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.recommendation_card svg {
+    width: 1.7vw;
+}
+
+.recommendation_card {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    min-width: 40vw;
+    height: auto;
+    background-color: #374151;
+    padding: 1.5vw;
+    color: #9CA3AF;
+    border-radius: 5px;
+    margin: 3vw 2vw;
+}
+
+#recommendation_cards .recommendation_card p {
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    font-size: 1.1vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 3px;
+    line-height: 2vw;
+}
+
+#recommendation_cards .recommendation_card h3 {
+    color: #fff;
+    font-size: 1.5vw;
+}
+
+#recommendation_cards .recommendation_card h4 {
+    font-size: 1vw;
+}
+
+/* Drop-Down */
+#nav_options {
+    position: absolute;
+    width: 15vw;
+    height: auto; /* Change height to auto for responsiveness */
+    padding: 1vw;
+    background-color: #111827;
+    z-index: 3;
+    right: 5.8vw;
+    flex-direction: column;
+    list-style: none;
+    border: 1px solid white;
+    display: none;
+}
+
+#horizontal_line_in_option_drop {
+    width: 100%;
+    height: 0.1vw;
+    background-color: #fff;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#nav_options button {
+    border: none;
+}
+
+#nav_options button:hover {
+    box-shadow: 0px 0px 5px 0.1px #9333EA; /* Adjust values as needed */
+}
+
+#nav_options #header_of_option_drop svg {
+    cursor: pointer;
+    color: #fff;
+    width: 2vw;
+}
+
+#header_of_option_drop {
+    display: flex;
+    flex-direction: row;
+}
+
+#header_of_option_drop p {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    color: #fff;
+    padding-top: 0.5vw;
+}
+
+#nav_options a {
+    font-size: 1.1vw;
+}
+
+#nav_options #header_of_option_drop p {
+    font-size: 1.1vw;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    #nav_options {
+        width: 20%;
+        height: auto; /* Change height to auto for responsiveness */
+        right: 0; /* Reset right property for full width */
+    }
+
+    #header_of_option_drop p, #nav_options a {
+        font-size: 1.1vw; /* Adjust font size for smaller screens */
+    }
+    #header_of_option_drop {
+        align-items: center;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    #nav_options #header_of_option_drop svg {
+        width: 2vw;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 3rd Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.content_page_third {
+    background-color: #111827;
+    /* background-color: red; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vw;
+}
+
+.content_page_third .heading_as_separator {
+    padding-bottom: 7vw;
+}
+.content_page_third .heading_as_separator #h_1 {
+    font-size: 2vw;
+}
+.content_page_third #group_skills {
+    position: relative;
+    margin: 10px auto 0 auto;
+    width: 85vw;
+    height: auto;
+    padding: 2vw 0vw;
+    /* background-color: red; */
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    gap: 5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_page_third #group_skills .individual_skill {
+    width: 40vw;
+    height: auto;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content_page_third #group_skills .individual_skill .skill_heading {
+    font-size: 1.5vw;
+    color: #fff;
+    margin: 2vw;
+}
+
+.content_page_third #group_skills .individual_skill .base_container {
+    width: 90%;
+    height: 0.3vw;
+    background-color: rgb(156 163 175);
+    margin: 2vw;
+}
+
+.content_page_third #group_skills .individual_skill .base_container #actual_coverage1 {
+    width: 30%;
+    height: 0.3vw;
+    background-color: #2270E2;
+}
+
+.content_page_third #group_skills .individual_skill .base_container #actual_coverage2 {
+    width: 20%;
+    height: 0.3vw;
+    background-color: #2270E2;
+}
+
+.content_page_third #group_skills .individual_skill .base_container #actual_coverage3 {
+    width: 90%;
+    height: 0.3vw;
+    background-color: #2270E2;
+}
+
+.content_page_third #group_skills .individual_skill .base_container #actual_coverage4 {
+    width: 30%;
+    height: 0.3vw;
+    background-color: #2270E2;
+}
+
+@keyframes indicatePercentage1 {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 30%;
+	}
+}
+
+@keyframes indicatePercentage2 {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 20%;
+	}
+}
+
+@keyframes indicatePercentage3 {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 90%;
+	}
+}
+
+@keyframes indicatePercentage4 {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 30%;
+	}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 4th Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.content_page_fourth {
+    background-color: #111827;
+    /* background-color: red; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vw;
+    /* border: 1px solid white; */
+}
+.content_page_fourth .heading_as_separator {
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+}
+.content_page_fourth #group_softwares {
+    position: relative;
+    margin: 10px auto 0 auto;
+    width: 85vw;
+    height: auto;
+    padding: 2vw 0vw;
+    /* background-color: wheat; */
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.content_page_fourth #group_softwares #section_top {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+.content_page_fourth #group_softwares #section_bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+.content_page_fourth #group_softwares #section_top .software_common_design, .content_page_fourth #group_softwares #section_bottom .software_common_design {
+    /* border: 1px solid blue; */
+    padding: 3vw 2vw;
+    width: 25vw;
+    height: 32vw;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border-radius: 10px;
+}
+.content_page_fourth #group_softwares #section_top .software_common_design:hover, .content_page_fourth #group_softwares #section_bottom .software_common_design:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.content_page_fourth #group_softwares #section_top .software_common_design .software_image, .content_page_fourth #group_softwares #section_bottom .software_common_design .software_image {
+    /* border: 1px solid #111827; */
+    padding: 1vw;
+    justify-content: center;
+    text-align: center;
+}
+/* .content_page_fourth #group_softwares #section_top .software_common_design .software_image:hover, .content_page_fourth #group_softwares #section_bottom .software_common_design .software_image:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+} */
+
+.content_page_fourth #group_softwares #section_top .software_common_design .software_name, .content_page_fourth #group_softwares #section_bottom .software_common_design .software_name {
+    padding: 1vw;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1.05vw;
+    font-weight: bolder;
+}
+/* .content_page_fourth #group_softwares #section_top .software_common_design .software_name:hover, .content_page_fourth #group_softwares #section_bottom .software_common_design .software_name:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+} */
+
+.content_page_fourth #group_softwares #section_top .software_common_design .software_description, .content_page_fourth #group_softwares #section_bottom .software_common_design .software_description {
+    /* border: 1px solid #374151; */
+    padding: 1vw;
+    color: #fff;
+    font-size: 1.05vw;
+    line-height: 1.7vw;
+}
+/* .content_page_fourth #group_softwares #section_top .software_common_design .software_description:hover, .content_page_fourth #group_softwares #section_bottom .software_common_design .software_description:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+} */
+
+.content_page_fourth #group_softwares .software_description .description_links {
+    text-decoration: underline;
+    color: rgb(53, 53, 195);
+}
+.content_page_fourth #group_softwares .software_description .description_links:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 4th Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.content_page_fifth {
+    background-color: #111827;
+    height: auto;
+}
+.content_page_fifth .heading_as_separator {
+    padding-top: 5vw;
+    padding-bottom: 10vw;
+}
+
+.content_page_fifth #group_connectivities {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2vw;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background: blur(50px);
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.content_page_fifth #group_connectivities .individual_connectivity {
+    /* border: 1px solid #fff; */
+    width: 30vw;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding-top: 3.5vw;
+    line-height: 100px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.content_page_fifth #group_connectivities .individual_connectivity:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content_page_fifth #group_connectivities .individual_connectivity .magnitude {
+    font-size: 2.8vw;
+    color: #fff;
+}
+.content_page_fifth #group_connectivities .individual_connectivity .base_heading {
+    font-size: 2.1vw;
+    color: #fff;
+    font-weight: bolder;letter-spacing: 0.2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Sixth Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  
+.content_page_sixth {
+    width: 100%;
+    height: auto;
+    background-color: #111827;
+    padding-bottom: 4vw;
+}
+.content_page_sixth .heading_as_separator {
+    padding-top: 5vw;
+    padding-bottom: 7vw;
+}
+.content_page_sixth .heading_as_separator #h_1 {
+    width: 100%;
+    height: auto;
+    padding-top: 0vw;
+    font-size: 2.5vw;
+    color: #9333EA;
+}
+.content_page_sixth #scroll_end_thought {
+    width: 90vw;
+    height: auto;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 1vw 1vw;
+    border-radius: 10px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+}
+.content_page_sixth #scroll_end_thought:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.content_page_sixth #scroll_end_thought #thought {
+    padding: 1.5vw 1vw;
+    width: 100%;
+    height: auto;
+}
+.content_page_sixth #scroll_end_thought #thought p {
+    font-size: 1.3vw;
+    padding: 1.5vw 1vw;
+    color: #fff;
+    line-height: 3vw;
+}
+.content_page_sixth #scroll_end_thought #thought h2 {
+    font-size: 1.8vw;
+    color: #fff;
+    text-align: end;
+    padding-right: 10vw;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Seventh Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.footer_page_seventh {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1vw;
+    background-color: #1F2937;
+    box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.3);
+}
+.footer_page_seventh #back_to_top {
+    width: 100%;
+    height: auto;
+    padding: 1vw 0vw 1vw 0vw;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer_page_seventh #back_to_top:hover {
+    color: rgba(255, 255, 255, 1);
+}
+.footer_page_seventh #back_to_top h2 {
+    font-size: 1.5vw;
+}
+.footer_page_seventh #overall_container #icon_name {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    color: rgba(255, 255, 255, 0.8);
+}
+.footer_page_seventh #overall_container #icon_name img {
+    width: 3vw;
+    display: inline;
+}
+.footer_page_seventh #overall_container #icon_name h2 {
+    display: inline;
+    font-size: 1.55vw;
+}
+.footer_page_seventh #overall_container #icon_name #copyright {
+    font-size: 1vw;
+}
+.footer_page_seventh #overall_container #icon_name #copyright #copyright_link {
+    color: rgb(53, 53, 195);
+}
+.footer_page_seventh #overall_container #icon_name #copyright #copyright_link:hover {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.footer_page_seventh #overall_container {
+    display: flex;
+    height: auto;
+    padding: 3vw 3vw 2vw 3vw;
+}
+.footer_page_seventh #overall_container #vertical_divider {
+    width: 0.2vw;
+    height: 12vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40%;
+    margin: 0.5vw 5vw;
+}
+.footer_page_seventh #overall_container #columns {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.footer_page_seventh #overall_container #columns #column_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    justify-content: center;
+}
+.footer_page_seventh #overall_container #columns #column_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    justify-content: center;
+}
+.footer_page_seventh #overall_container #columns #column_1 li {
+    list-style-type: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
+    letter-spacing: 0.03vw;
+    font-size: 1vw;
+}
+.footer_page_seventh #overall_container #columns #column_2 li {
+    list-style-type: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
+    letter-spacing: 0.03vw;
+    font-size: 1vw;
+}
+.footer_page_seventh #overall_container #columns #column_1 .link_footer {
+    color: rgb(53, 53, 195);
+}
+.footer_page_seventh #overall_container #columns #column_1 .link_footer:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer_page_seventh #overall_container #columns #column_2 .link_footer {
+    color: rgb(53, 53, 195);
+}
+.footer_page_seventh #overall_container #columns #column_2 .link_footer:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*  Media Queries Starts  */
+
+@media (min-width: 361px) and (max-width: 700px) {
+    .navigators {
+        display: none;
+    }
+    
+    .login_signup_buttons {
+        display: none;
+    }
+    #menu_icon {
+        display: block;
+        cursor: pointer;
+    }
+    .container_main_for_header {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        justify-content: center;
+    }
+    .container_top_for_header {
+        display: flex;
+        align-items: center;
+        background-color: #1F2937;
+        height: 6vw;
+        padding: 0 20px;
+    }
+    .division_content_page_first_right {
+        display: none;
+    }
+    /* Designing SignUp/SugnIn Buttons */
+	.dropdown_login_signup_buttons {
+        display: flex;
+		flex-direction: column;
+		gap: 1vw;
+		margin-top: 1vw;
+	}
+	.dropdown_login_signup_buttons button {
+		padding: 1vw 1.5vw;
+		background-color: #c084fc;
+		border: none;
+		border-radius: 5px;
+		margin-left: 1.1vw;
+		font-size: 1.6vw;
+		font-family: cursive;
+		text-align: center;
+		justify-content: center;
+		color: white;
+		cursor: pointer;
+		transition: 0.3s ease;
+	}
+	.dropdown_login_signup_buttons button:hover {
+		background-color: #a56cfd;
+		transform: translateY(-2px);
+		box-shadow: -4 -4px 5px rgba(0, 0, 0, 1);
+	}
+	/* Designing DropDown Box Structure */
+	#nav_options {
+		position: absolute;
+		display: none;
+		flex-direction: column;
+		width: 34vw;
+		height: auto;
+		padding: 1vw;
+		background-color: #111827;
+		z-index: 3;
+		right: 4.9vw;
+		list-style: none;
+		border: 1px solid white;
+		border-radius: 5px;
+	}
+	#nav_options #header_of_option_drop {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 1vw;
+		padding-top: 1vw;
+		padding-bottom: 1vw;
+		font-family: cursive;
+	}
+	#nav_options #header_of_option_drop p {
+		font-size: 1.5vw;
+	}
+	#nav_options #header_of_option_drop svg {
+		width: 3vw;
+	}
+	#nav_options .nav_link_buttons a {
+		font-size: 2vw;
+		font-family: cursive;
+	}
+    .content_page_first .division_content_page_first_left #title #h_1 {
+        font-size: 4.5vw;
+    }
+    .content_page_first .division_content_page_first_left #title #h_2 {
+        font-size: 3.5vw;
+        margin-top: 4.5vw;
+        margin-bottom: 4.5vw;
+    }
+    .content_page_first .division_content_page_first_left #title p {
+        font-size: 2.2vw;
+        text-align: center;
+        line-height: 3vw;
+        min-width: 85%;
+    }
+    .division_content_page_first_left {
+        width: 100%;
+        height: 25vw;
+        text-align: center;
+        transition: all 0.7s ease-out;
+    }
+
+    .content_page_first .division_content_page_first_left #title p {
+        margin: 2vw auto;
+        width: 75%;
+    }
+    #recommendation_cards {
+        flex-direction: column;
+        margin: 10vw calc(100% - 82vw);
+        width: 0%;
+    }
+    .recommendation_card {
+        width: 60vw;
+        margin: 3vw 2vw;
+    }  
+    #recommendation_cards #recommendation_card_second_child {
+        margin-left: 2vw;
+    }
+    .heading_as_separator #h_1 {
+        width: 100%;
+        height: 2.5vw;
+        padding-top: 5vw;
+        font-size: 4.2vw;
+    }
+    .content_page_first {
+        width: 100%;
+        height: 50vw;
+        display: block;
+        transition: all 0.7s ease-out;
+    }
+    .content_page_second {
+        width: 100%;
+        height: auto;
+        display: block;
+        /* background-color: green; */
+        padding-bottom: 0px;
+    }
+    .content_page_third {
+        padding-top: 0px;
+        width: 100%;
+        height: auto;
+        /* display: block; */
+        /* background-color: yellowgreen; */
+    }
+    .content_page_third .heading_as_separator {
+        padding-bottom: 12vw;
+    }
+    .content_page_third .heading_as_separator #h_1 {
+        width: 100%;
+        height: 2.5vw;
+        padding-top: 0vw;
+        font-size: 4vw;
+    }
+    .content_page_third #group_skills .individual_skill .skill_heading {
+        font-size: 2.2vw;
+        padding-bottom: 3vw;
+    }
+    html, body {  /* IMPORTANT */
+        display: flex;
+        flex-direction: column;
+    }
+    .content_page_third #group_skills {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 10px auto 0 auto;
+        width: auto;
+        height: auto;
+        padding: 2vw 0vw;
+    }
+    
+    .content_page_third #group_skills .individual_skill {
+        width: 70vw;
+        height: auto;
+        padding: 5vw 0vw;
+        background-color: transparent;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fourth Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .content_page_fourth .heading_as_separator {
+        padding-bottom: 12vw;
+    }
+    .content_page_fourth .heading_as_separator #h_1 {
+        width: 100%;
+        height: 2.5vw;
+        padding-top: 0vw;
+        font-size: 4vw;
+    }
+    .content_page_fourth #group_softwares {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
+    .content_page_fourth #group_softwares #section_top {
+        flex-direction: column;
+        gap: 5vw;
+    }
+    .content_page_fourth #group_softwares #section_bottom {
+        flex-direction: column;
+        gap: 5vw;
+    }
+    .content_page_fourth #group_softwares #section_top .software_common_design, .content_page_fourth #group_softwares #section_bottom .software_common_design {
+        /* border: 1px solid blue; */
+        padding: 3vw 2vw;
+        width: 32vw;
+        height: 32vw;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
+    .content_page_fourth #group_softwares #section_top .software_common_design .software_description, .content_page_fourth #group_softwares #section_bottom .software_common_design .software_description {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 3vW;
+        justify-content: center;
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fifth Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .content_page_fifth {
+        background-color: #111827;
+        height: auto;
+    }
+    .content_page_fifth .heading_as_separator {
+        padding-top: 5vw;
+        padding-bottom: 10vw;
+    }
+    
+    .content_page_fifth #group_connectivities {
+        flex-direction: column;
+        margin-top: 10vw;
+    }
+    
+    .content_page_fifth #group_connectivities .individual_connectivity {
+        /* border: 10px solid #fff; */
+        width: 80vw;
+        margin: 0 auto;
+        line-height: 10vw;
+        border-radius: 10px;
+    }
+    .content_page_fifth #group_connectivities .individual_connectivity:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .content_page_fifth #group_connectivities .individual_connectivity .magnitude {
+        font-size: 3.5vw;
+        color: #fff;
+    }
+    .content_page_fifth #group_connectivities .individual_connectivity .base_heading {
+        font-size: 2.4vw;
+        color: #fff;
+        font-weight: bolder;
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Sixth Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .content_page_sixth #scroll_end_thought #thought p {
+        font-size: 2.3vw;
+        line-height: 5vw;
+    }
+    .content_page_sixth #scroll_end_thought #thought h2 {
+        font-size: 3.5vw;
+    }
+    
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .footer_page_seventh {
+        width: 100%;
+        height: auto;
+        padding-bottom: 1vw;
+        background-color: #1F2937;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .footer_page_seventh #back_to_top {
+        width: 100%;
+        height: auto;
+        padding: 1vw 0vw 1vw 0vw;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .footer_page_seventh #back_to_top:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+    .footer_page_seventh #back_to_top h2 {
+        font-size: 2vw;
+    }
+    .footer_page_seventh #overall_container #icon_name {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .footer_page_seventh #overall_container #icon_name img { /* * */
+        width: 5vw;
+        display: inline;
+    }
+    .footer_page_seventh #overall_container #icon_name h2 {
+        display: inline;
+        font-size: 2.55vw;
+    }
+    .footer_page_seventh #overall_container #icon_name #copyright {
+        font-size: 2vw;
+    }
+    .footer_page_seventh #overall_container #icon_name #copyright span {
+        color: rgb(53, 53, 195);
+    }
+    .footer_page_seventh #overall_container #icon_name #copyright span:hover {
+        text-decoration: underline;
+        color: blue;
+        cursor: pointer;
+    }
+    .footer_page_seventh #overall_container { /* * */
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        padding: 3vw 3vw 2vw 3vw;
+    }
+    .footer_page_seventh #overall_container #vertical_divider { /* * */
+        width: 0.2vw;
+        height: 18vw;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 40%;
+        margin: 0.5vw 5vw;
+    }
+    .footer_page_seventh #overall_container #columns { /* * */
+        display: flex;
+        flex-direction: row;
+        gap: 3vw;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .footer_page_seventh #overall_container #columns #column_1 {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        justify-content: center;
+    }
+    .footer_page_seventh #overall_container #columns #column_2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        justify-content: center;
+    }
+    .footer_page_seventh #overall_container #columns #column_1 li {
+        list-style-type: none;
+        color: rgba(255, 255, 255, 0.8);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: lighter;
+        letter-spacing: 0.03vw;
+        font-size: 1.4vw;
+    }
+    .footer_page_seventh #overall_container #columns #column_2 li {
+        list-style-type: none;
+        color: rgba(255, 255, 255, 0.8);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: lighter;
+        letter-spacing: 0.03vw;
+        font-size: 1.4vw;
+    }
+    .footer_page_seventh #overall_container #columns #column_1 .link_footer {
+        color: rgb(53, 53, 195);
+    }
+    .footer_page_seventh #overall_container #columns #column_1 .link_footer:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .footer_page_seventh #overall_container #columns #column_2 .link_footer {
+        color: rgb(53, 53, 195);
+    }
+    .footer_page_seventh #overall_container #columns #column_2 .link_footer:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 360px) {
+    html, body {
+        width: auto;
+        height: 100%;
+        margin: 0; /* Remove default margins */
+        padding: 0; /* Remove default padding */
+        /* overflow-x: hidden; Optional: hide horizontal scrollbar */
+    }
+    .navigators {
+        display: none;
+    }
+    
+    .login_signup_buttons {
+        display: none;
+    }
+    #menu_icon {
+        display: block;
+        cursor: pointer;
+        font-size: 3vh;
+    }
+    .container_main_for_header {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        justify-content: center;
+    }
+    .container_bottom_for_header {
+        background-color: #1F2937;
+        height: 5.5vw;
+        text-align: center;
+        padding-top: 1.5vw;
+    }
+    .container_top_for_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1F2937;
+        height: 15vw;
+        padding: 0 20px;
+    }
+    #live_running_updates {
+        font-size: 2.5vw;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    #logo p {
+        color: #D8B4FE;
+        font-size: 7vw;
+    }
+    #separator_line {
+		height: 0.13vh;
+	}
+    .division_content_page_first_right {
+        display: none;
+    }
+    .content_page_first .division_content_page_first_left #title #h_1 {
+        font-size: 3.7vw;
+    }
+    .content_page_first .division_content_page_first_left #title #h_2 {
+        font-size: 3.5vw;
+        margin-top: 4.5vw;
+        margin-bottom: 4.5vw;
+    }
+    .content_page_first .division_content_page_first_left #title p {
+        font-size: 2.2vw;
+        text-align: center;
+        line-height: 3vw;
+        min-width: 85%;
+    }
+    .division_content_page_first_left {
+        width: 100%;
+        height: 25vw;
+        text-align: center;
+        transition: all 0.7s ease-out;
+    }
+
+    .content_page_first .division_content_page_first_left #title p {
+        margin: 2vw auto;
+        width: 75%;
+    }
+    #recommendation_cards {
+        flex-direction: column;
+        padding: 5vw 0vw 0vw 10vw;
+        width: 100%;
+    }
+    .recommendation_card {
+        width: 75vw;
+        padding-left: 5vw;
+        padding-bottom: 5vw;
+    }  
+    #recommendation_cards .recommendation_card svg {
+        width: 2.6vw;
+    }
+    #recommendation_cards .recommendation_card p {
+        font-size: 3vw;
+        line-height: 5vw;
+    }
+    #recommendation_cards .recommendation_card h3 {
+        margin-top: 5.5vw;
+        font-size: 3vw;
+    }
+    #recommendation_cards .recommendation_card h4 {
+        font-size: 2.4vw;
+    }
+    .heading_as_separator #h_1 {
+        width: 100%;
+        height: 2.5vw;
+        font-size: 4vw;
+    }
+    /* Designing SignUp/SugnIn Buttons */
+	.dropdown_login_signup_buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 2vw;
+		margin-top: 1vw;
+		margin-bottom: 1vw;
+		margin-right: 1vw;
+	}
+	.dropdown_login_signup_buttons button {
+		padding: 1.8vw 2.2vw;
+		background-color: #c084fc;
+		border: none;
+		border-radius: 5px;
+		margin-left: 1.1vw;
+		font-size: 3.5vw;
+		font-family: 'Times New Roman', Times, serif;
+		text-align: center;
+		justify-content: center;
+		color: white;
+		cursor: pointer;
+		transition: 0.3s ease;
+	}
+	.dropdown_login_signup_buttons button:hover {
+		background-color: #a56cfd;
+		transform: translateY(-2px);
+		box-shadow: -4 -4px 5px rgba(0, 0, 0, 1);
+	}
+	/* Designing DropDown Box Structure */
+	#nav_options {
+		position: absolute;
+		display: none;
+		flex-direction: column;
+		width: 55vw;
+		height: auto;
+		padding: 1vw;
+		background-color: #111827;
+		z-index: 3;
+		right: 4.9vw;
+		list-style: none;
+		border: 1px solid white;
+		border-radius: 5px;
+	}
+	#nav_options #header_of_option_drop {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 1vw;
+		padding-top: 1vw;
+		padding-bottom: 1vw;
+		font-family: cursive;
+	}
+	#nav_options #header_of_option_drop p {
+		font-size: 2.5vw;
+	}
+	#nav_options #header_of_option_drop svg {
+		width: 6vw;
+	}
+	#nav_options .nav_link_buttons a {
+		font-size: 4vw;
+		padding: 2vw 0vw;
+		margin: 1vw;
+		font-family: 'Times New Roman', Times, serif;
+	}
+    .content_page_first {
+        width: 100%;
+        min-height: 65vw;
+        display: block;
+        transition: all 0.7s ease-out;
+        padding-top: 25vw;
+    }
+    .content_page_second {
+        width: 100%;
+        height: 103vh;
+        display: block;
+        padding-top: 5vw;
+    }
+    .content_page_third {
+        padding-top: 0px;
+        width: 100%;
+        height: auto;
+        /* display: block; */
+        /* background-color: yellowgreen; */
+    }
+    .content_page_third .heading_as_separator {
+        padding-top: 12vw;
+        padding-bottom: 12vw;
+    }
+    .content_page_third .heading_as_separator #h_1 {
+        width: 100%;
+        height: 2.5vw;
+        padding-top: 0vw;
+        font-size: 4vw;
+    }
+    .content_page_third #group_skills .individual_skill .skill_heading {
+        font-size: 2.2vw;
+        padding-bottom: 3vw;
+    }
+    html, body {  /* IMPORTANT */
+        display: flex;
+        flex-direction: column;
+    }
+    .content_page_third #group_skills {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 10px auto 0 auto;
+        width: auto;
+        height: auto;
+        padding: 2vw 0vw;
+    }
+    
+    .content_page_third #group_skills .individual_skill {
+        width: 70vw;
+        height: auto;
+        padding: 5vw 0vw;
+        background-color: transparent;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    /* FOURTH PART */
+    .content_page_fourth #group_softwares {
+        display: flex;
+        flex-direction: column;
+    }
+    .content_page_fourth #group_softwares #section_top {
+        flex-direction: column;
+        gap: 5vw;
+    }
+    .content_page_fourth #group_softwares #section_bottom {
+        flex-direction: column;
+        gap: 5vw;
+    }
+    .content_page_fourth #group_softwares #section_top .software_common_design, .content_page_fourth #group_softwares #section_bottom .software_common_design {
+        /* border: 1px solid blue; */
+        padding: 3vw 2vw;
+        width: 80vw;
+        height: auto;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+    .content_page_fourth #group_softwares #section_top .software_common_design .software_description, .content_page_fourth #group_softwares #section_bottom .software_common_design .software_description {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 3vW;
+        justify-content: center;
+        font-size: 2vw;
+        margin-top: 10vw;
+    }
+    /* FIFTH PAGE */
+    .content_page_fifth {
+        background-color: #111827;
+        height: auto;
+    }
+    .content_page_fifth .heading_as_separator {
+        padding-top: 5vw;
+        padding-bottom: 10vw;
+    }
+    
+    .content_page_fifth #group_connectivities {
+        flex-direction: column;
+        margin-top: 10vw;
+    }
+    
+    .content_page_fifth #group_connectivities .individual_connectivity {
+        /* border: 1px solid #fff; */
+        width: 80vw;
+        margin: 0 auto;
+        line-height: 10vw;
+        border-radius: 10px;
+    }
+    .content_page_fifth #group_connectivities .individual_connectivity:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .content_page_fifth #group_connectivities .individual_connectivity .magnitude {
+        font-size: 3.5vw;
+        color: #fff;
+    }
+    .content_page_fifth #group_connectivities .individual_connectivity .base_heading {
+        font-size: 2.4vw;
+        color: #fff;
+        font-weight: bolder;
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Sixth Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .content_page_sixth #scroll_end_thought #thought p {
+        font-size: 2.3vw;
+        line-height: 5vw;
+    }
+    .content_page_sixth #scroll_end_thought #thought h2 {
+        font-size: 3.5vw;
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .footer_page_seventh {
+        width: 100%;
+        height: auto;
+        padding-bottom: 1vw;
+        background-color: #1F2937;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .footer_page_seventh #back_to_top {
+        width: 100%;
+        height: auto;
+        padding: 1vw 0vw 1vw 0vw;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .footer_page_seventh #back_to_top:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+    .footer_page_seventh #back_to_top h2 {
+        font-size: 3vw;
+    }
+    .footer_page_seventh #overall_container #icon_name {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .footer_page_seventh #overall_container #icon_name img {
+        width: 7vw;
+        display: inline;
+        margin: 0 auto;
+    }
+    .footer_page_seventh #overall_container #icon_name h2 {
+        display: inline;
+        font-size: 3vw;
+    }
+    .footer_page_seventh #overall_container #icon_name #copyright {
+        font-size: 2vw;
+    }
+    .footer_page_seventh #overall_container #icon_name #copyright span {
+        color: rgb(53, 53, 195);
+    }
+    .footer_page_seventh #overall_container #icon_name #copyright span:hover {
+        text-decoration: underline;
+        color: blue;
+        cursor: pointer;
+    }
+    .footer_page_seventh #overall_container { /* * */
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 3vw 3vw 2vw 3vw;
+        text-align: center;
+    }
+    .footer_page_seventh #overall_container #vertical_divider { /* * */
+        height: 0.2vw;
+        width: 50vw;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 40%;
+        margin: 3vw auto;
+    }
+    .footer_page_seventh #overall_container #columns { /* * */
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+        width: 50vw;
+        /* border: 2px solid #fff; */
+        justify-content: space-evenly;
+        margin: 0 auto;
+    }
+    .footer_page_seventh #overall_container #columns #column_1 {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        justify-content: center;
+        text-align: left;
+    }
+    .footer_page_seventh #overall_container #columns #column_2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        justify-content: center;
+        text-align: right;
+    }
+    .footer_page_seventh #overall_container #columns #column_1 li {
+        list-style-type: none;
+        color: rgba(255, 255, 255, 0.8);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: lighter;
+        letter-spacing: 0.03vw;
+        font-size: 2vw;
+    }
+    .footer_page_seventh #overall_container #columns #column_2 li {
+        list-style-type: none;
+        color: rgba(255, 255, 255, 0.8);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: lighter;
+        letter-spacing: 0.03vw;
+        font-size: 2vw;
+    }
+    .footer_page_seventh #overall_container #columns #column_1 .link_footer {
+        color: rgb(53, 53, 195);
+    }
+    .footer_page_seventh #overall_container #columns #column_1 .link_footer:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .footer_page_seventh #overall_container #columns #column_2 .link_footer {
+        color: rgb(53, 53, 195);
+    }
+    .footer_page_seventh #overall_container #columns #column_2 .link_footer:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

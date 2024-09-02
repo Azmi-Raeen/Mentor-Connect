@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Mentors</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Online CSS Properties -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"/>
+
+    <!-- Favicon -->
+    <!--<link rel="icon" type="image/png" href="./Images_Index/favicon.ico">-->
+</head>
+<body>
+    <!-- Navigation Bar Starts -->
+    <header>
+        <div class="container_main_for_header">
+            <div class="container_top_for_header" id="color_change_item_1">
+                <div id="logo">
+                    <a href="index.html"><p id="color_change_item_2">Tech Fossils</p></a>
+                </div>
+                <div class="navigation_right">
+                    <nav class="navigators">
+                        <ul>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_3">Mentor Connect</a></li>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_4">Researches</a></li>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_5">Get a Mentor</a></li>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_6">Be a Mentor</a></li>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_7">Find a Mentor</a></li>
+                            <li class="nav_link_buttons"><a href="feedback.html" id="color_change_item_8">Feedback</a></li>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_9">Your Corner</a></li>
+                            <svg id="svgIcon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="md:hidden w-4 text-purple-700 mt-1 ml-2 cursor-pointer dark:text-white" height="28" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></svg>
+                        </ul>
+                    </nav>
+                    <div class="login_signup_buttons">
+                        <button>Log In</button>
+                        <button>Sign Up</button>
+                    </div>
+                    <div class="menu_and_option">
+                        <div id="menu_icon">
+                            <i class="ri-menu-3-fill" id="menu_3_icon"></i>
+                        </div>
+                        <div id="nav_options" style="display: none;">
+                            <div id="header_of_option_drop">
+                                <p>Mode : Light / Dark</p>
+                                <svg id="svgIcon_" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="md:hidden w-4 text-purple-700 mt-1 ml-2 cursor-pointer dark:text-white" height="28" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></svg>
+                            </div>
+                            <div id="horizontal_line_in_option_drop"></div>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_3">Tech Stack</a></button>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_4">Researches</a></button>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_5">Get a Mentor</a></button>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_6">Researches</a></button>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_7">Know Me</a></button>
+                            <button class="nav_link_buttons"><a href="feedback.html" id="color_change_item_8">Feedback</a></button>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_9">Your Corner</a></button>
+                            <div id="signbtn" class="dropdown_login_signup_buttons">
+                                <button>Log In</button>
+                                <button>Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="separator_line"></div>
+            <div class="container_bottom_for_header" id="color_change_item_10">
+                <div id="live_running_updates">
+                    <marquee scrollamount="11"><p>Founded by : Shanivi | Frontend by : Azmi | Backend by : Prabhav | PowerPoint Presentation by : Mukund | Rest Team Members : Udita & Utkarsh</p></marquee>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navigation Bar Ends -->
+
+    <!-- Page 1 Content Starts -->
+    <div class="content_page_first" id="color_change_item_13">
+        <div class="division_content_page_first_left" id="color_change_item_12">
+            <div id="title">
+                <h1 id="h_1">Embark on a Journey with <span>Your Mentor</span></h1>
+                <h2 id="h_2">~ Read • Understand • Elevate</h2>
+                <p>Connecting with experienced professionals can significantly accelerate your journey towards achieving your goals. Our platform allows you to tap into a wealth of knowledge and expertise from mentors across various fields. Whether you're looking to enhance your career, develop new skills, or seek advice on specific challenges, our mentors are here to guide you. You can browse through a diverse range of professionals, each offering unique insights and perspectives. Booking a session is easy and flexible, allowing you to choose times that work best for you. With personalized guidance, you'll be empowered to take confident steps toward success.</p>
+            </div>
+        </div>
+        <div class="division_content_page_first_right">
+            <img src="./Images_Index/laptop_on_desk.jpg" alt="">
+        </div>
+    </div>
+    <!-- Page 1 Content Ends -->
+    
+    <!-- Page 2 Content Starts -->
+    <div class="content_page_second" id="color_change_item_11">
+        <div class="heading_as_separator">
+            <h1 id="h_1">Top Mentors</h1>
+        </div>
+        <div id="recommendation_cards">
+            <div class="recommendation_card", id="color_change_item_14">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-3 h-3 text-gray-400 mb-4" viewBox="0 0 975.036 975.036"><path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path></svg>
+                <p>Aparna Chennapragada is a distinguished product leader at Google, where she served as the VP of Augmented Reality and was previously the head of Google Assistant. She has a rich background in computer science and engineering and has been pivotal in driving innovation in AI and AR technologies at Google.
+                </p>
+                <h3 class="recommender_name" id="color_change_item_15">Aparna Chennapragada</h3>
+                <h4 class="recommender_post">Computer Science and engineering</h4>
+            </div>
+            <div class="recommendation_card" id="recommendation_card_second_child">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-3 h-3 text-gray-400 mb-4" viewBox="0 0 975.036 975.036"><path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path></svg>
+                <p>Scott Guthrie is the Executive Vice President of Microsoft's Cloud + AI group. He has been a key figure in the development of Microsoft's cloud platform, Azure, and has overseen the company's AI initiatives. His work has been crucial in establishing Microsoft as a leader in cloud services.</p>
+                <h3 class="recommender_name" id="color_change_item_16">Scott Guthrie</h3>
+                <h4 class="recommender_post">Computer Science and engineering</h4>
+            </div>
+        </div>
+    </div>
+    <!-- Page 2 Content Ends -->
+
+    <!-- Page 3 Content Starts -->
+    
+    <!-- Page 3 Content Ends -->
+
+    <!-- Page 4 Content Starts -->
+    <div class="content_page_fourth" id="fourth_page">
+        <div class="heading_as_separator reveal">
+            <h1 id="h_1">Our Alumni</h1>
+        </div>
+
+        <div id="group_softwares" class="reveal">
+            <div id="section_top">
+                <div class="software_common_design" id="redirect_vscode">
+                    <div class="software_image">
+                        <img src="./Images_Index/WhatsApp Image 2024-09-02 at 00.13.15_2112458c.jpg" alt="" style="width: 10vw;">
+                    </div>
+                    <div class="software_name">
+                        <h1>Mr. Nikhil Singh</h1>
+                    </div> 
+                    <div class="software_description">
+                        <p><b>Achievement -></b> Gate 2024 : AIR 26</p>
+                        <p><b>Course : Btech</b></p>
+                        <p><b>Branch : Civil Engineering</b></p>
+                        <p><b>Batch : 2024</b></p>
+                    </div>
+                </div>
+                <div class="software_common_design" id="redirect_android_studio">
+                    <div class="software_image">
+                        <img src="./Images_Index/IPS_Officer.jpg" alt="" style="width: 10vw;">
+                    </div>
+                    <div class="software_name">
+                        <h1>Anshika Verma</h1>
+                    </div>
+                    <div class="software_description">
+                        <p><b>Achievement -></b> IPS Officer</p>
+                        <p><b>Course : </b>B.Tech</p>
+                        <p><b>Branch : </b>ECE</p>
+                        <p><b>Batch :</b>2021</p>
+                    </div>
+                </div>
+                <div class="software_common_design" id="redirect_pieces">
+                    <div class="software_image">
+                        <img src="./Images_Index/Alumna1.jpg" alt="" style="width: 11vw; margin-top: -1.1vw;">
+                    </div>
+                    <div class="software_name">
+                        <h1>Kajal Dahiya</h1>
+                    </div>
+                    <div class="software_description">
+                        <p><b>Achievement -> </b>Selected as a Ph.D. Scholar at The University of Sydney</p>
+                        <p><b>Course : </b>M.Sc. Medical Biotechnology</p>
+                        <p><b>Batch : </b>2020-22</p>
+                    </div>
+                </div>
+            </div>
+            <div id="section_bottom" class="reveal">
+                <div class="software_common_design" id="redirect_mysql_wb">
+                    <div class="software_image">
+                        <img src="./Images_Index/1.5Cr.jpeg" alt="" style="width: 10vw;">
+                    </div>
+                    <div class="software_name">
+                        <h1>Suryansh Pratap</h1>
+                    </div>
+                    <div class="software_description">
+                        <p><b>Achievement -> </b>A record Breaking Package of 1.5 Crore in OpenZepplin Company</p>
+                        <p><b>Course : </b> Btech CSE</p>
+                        <p><b>Batch : </b>2022-23</p>
+                    </div>
+                </div>
+                <div class="software_common_design" id="redirect_arduino_ide">
+                    <div class="software_image">
+                        <img src="./Images_Index/39lpa.jpeg" alt="" style="width: 10vw;">
+                    </div>
+                    <div class="software_name">
+                        <h1>Niharika Sharma</h1>
+                    </div>
+                    <div class="software_description">
+                        <p><b>Achievement -> </b> placed at AutoDesk Company for package 39 lpa</p>
+                        <p><b>Coure : </b>Btech CSE</p>
+                        <p><b>Batch : </b> 2023-24</p>
+                    </div>
+                </div>
+                <div class="software_common_design" id="redirect_jupyter">
+                    <div class="software_image">
+                        <img src="./Images_Index/14lpa.jpeg" alt="" style="width: 10vw; border-radius: 10vw;">
+                    </div>
+                    <div class="software_name">
+                        <h1>Geetika Bhatnagar</h1>
+                    </div>
+                    <div class="software_description">
+                        <p><b>Achievement -> </b>placed at ION Company for package 14lpa</p>
+                        <p><b>Course : </b>Btech CSE</p>
+                        <p><b>Batch : </b>2023-24</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page 4 Content Ends -->
+
+    <!-- Page 5 Content Starts -->
+    <div class="content_page_fifth" id="fifth_page">
+        <div class="heading_as_separator reveal">
+            <h1 id="h_1">Reach Through Sources</h1>
+        </div>
+
+        <div id="group_connectivities" class="reveal"> <!-- Webiste Taps LinkedIn Social Network-->
+            <div class="individual_connectivity" id="website_taps">
+                <div class="magnitude classrun1" id="count_website_taps">
+                    <p id="run1"> +</p>
+                </div>
+                <div class="base_heading">
+                    <p id="wt">Website Taps</p>
+                </div>
+            </div>
+            <div class="individual_connectivity" id="linkedin_connections">
+                <div class="magnitude classrun2" id="count_linkedin_connections">
+                    <p id="run2">0 +</p>
+                </div>
+                <div class="base_heading">
+                    <p id="lc">LinkedIn Connections</p>
+                </div>
+            </div>
+            <div class="individual_connectivity" id="personal_network">
+                <div class="magnitude classrun3" id="count_personal_network">
+                    <p id="run3">0 +</p>
+                </div>
+                <div class="base_heading">
+                    <p id="pn">Personal Network</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page 5 Content Ends -->
+
+    <!-- Page 6 Content Starts -->
+    <div class="content_page_sixth" id="sixth_page">
+        <div class="heading_as_separator reveal">
+            <h1 id="h_1">Ending Scroll With The Thought</h1>
+        </div>
+
+        <div id="scroll_end_thought" class="reveal">
+            <div id="thought">
+                <p id="p_thought">In challenging times, it's crucial to remember that initial impressions may not reveal the full picture. Take a step back and analyze the entirety of the situation, as there may be positive aspects you're overlooking. Keep the courage to start a new whenever needed; the first step isn't limited to a single attempt but can be taken each time you choose to rise. In every adversity, there are opportunities for growth, and every situation offers multiple paths — it's up to you to decide whether to restart or remain stagnant.</p>
+                <h2 id="h2_auth">~ Tech Fossils</h2>
+            </div>
+        </div>
+    </div>
+    <!-- Page 6 Content Ends -->
+
+    <!-- Page 7 Footers Starts -->
+    <div class="footer_page_seventh" id="seventh_page">
+        <div id="back_to_top">
+            <h2 id="h2_back_to_top">Back To Top &#9650;</h2>
+        </div>
+        <div id="overall_container"> <!--Col-->
+            <div id="icon_name">
+               <!-- <img src="./Images_Index/favicon.ico" alt=""/> -->
+                <h2 id="cr_name">Team : Tech Fossils</h2>
+                <div id="copyright">
+                    <span id="cr_year">Copyright &copy; 2024</span><br /><br /><span id="copyright_link">azmi47740@gmail.com</span>
+                </div>
+            </div>
+            <div id="vertical_divider"></div>
+            <div id="columns">
+                <div id="column_1">
+                    <li><span id="footer_li_1">GitHub : </span><span class="link_footer" id="github_link">Azmi-raeen</span></li>
+                    <li><span id="footer_li_2">LinkedIn : </span><span class="link_footer" id="linkedin_link">Azmi</span></li>
+                    <li><span id="footer_li_3">Leetcode : </span><span class="link_footer" id="leetcode_link">Azmi-raeen</span></li>
+                    <li><span id="footer_li_4">Twitter : </span><span class="link_footer" id="twitter_link">Azmi</span></li>
+                    <li><span id="footer_li_5">Google Scholar : <span class="" id="google_scholar_link">Azmi</span></span></li>
+                </div>
+                <div id="column_2">
+                    <li><span id="footer_li_6">Instagram : </span><span class="link_footer" id="instagram_link">Azmi</span></li>
+                    <li><span id="footer_li_7">Contact Number 1 : +91-888-2041-932</span></li>
+                    <li><span id="footer_li_8">Alternate Contact 2 : +91-752-0269-830</span></li>
+                    <li><span id="footer_li_9">Email (Commercial Use) : </span><span class="link_footer" id="mailto_rysh">azmi47740@gmail.com</span></li>
+                    <li><span id="footer_li_10">Email (Personal Use) : </span><span class="link_footer" id="mailto_rc">azmi.connects@gmail.com</span></li>
+                </div>
+            </div>
+        </div>
+    <!-- Page 7 Footers Ends -->
+
+    <!-- Below JavaScript Code is to Hide Dropdown Menu when user clicks anywhere except for that menu button -->
+    <script language="JavaScript">
+        document.onclick = myClickHandler;
+        function myClickHandler(event) {
+            var clickedElement = event.target
+            var isMenuIconClicked = clickedElement.id === 'menu_icon' || clickedElement.closest('#menu_icon');
+            if (!isMenuIconClicked) {
+                document.getElementById("nav_options").style.display = "none";
+            }
+        }
+    </script>
+    <!-- Below JavaScript Code is to animate percentage fill of skill covered (but when screen on scroll gets visible) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function isInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+            function handleScroll(animatedElementId, animationName) {
+                var animatedElement = document.getElementById(animatedElementId);
+                if (isInViewport(animatedElement)) {
+                    animatedElement.style.animation = animationName + " 2s ease-in-out";
+                }
+            }
+
+            window.addEventListener("scroll", function() {
+                handleScroll("actual_coverage1", "indicatePercentage1");
+                handleScroll("actual_coverage2", "indicatePercentage2");
+                handleScroll("actual_coverage3", "indicatePercentage3");
+                handleScroll("actual_coverage4", "indicatePercentage4");
+            });
+    
+            handleScroll("actual_coverage1", "indicatePercentage1");
+            handleScroll("actual_coverage2", "indicatePercentage2");
+            handleScroll("actual_coverage3", "indicatePercentage3");
+            handleScroll("actual_coverage4", "indicatePercentage4");
+        });
+    </script>
+    <script>
+        document.getElementById('redirect_vscode').addEventListener('click', () => {
+            window.open('https://code.visualstudio.com/', '_blank');
+        });
+        document.getElementById('redirect_android_studio').addEventListener('click', () => {
+            window.open('https://developer.android.com/', '_blank');
+        });
+        document.getElementById('redirect_pieces').addEventListener('click', () => {
+            window.open('https://pieces.app/', '_blank');
+        });
+        document.getElementById('redirect_mysql_wb').addEventListener('click', () => {
+            window.open('https://www.mysql.com/', '_blank');
+        });
+        document.getElementById('redirect_arduino_ide').addEventListener('click', () => {
+            window.open('https://www.arduino.cc/', '_blank');
+        });
+        document.getElementById('redirect_jupyter').addEventListener('click', () => {
+            window.open('https://jupyter.org/', '_blank');
+        });
+        document.getElementById('windows_1').addEventListener('click', () => {
+            window.open('https://update.code.visualstudio.com/1.89.1/win32-x64-user/stable', '_blank');
+        });
+        document.getElementById('windows_2').addEventListener('click', () => {
+            window.open('https://update.code.visualstudio.com/1.89.1/win32-arm64-user/stable', '_blank');
+        });
+        document.getElementById('mac_1').addEventListener('click', () => {
+            window.open('https://update.code.visualstudio.com/1.89.1/darwin-universal/stable', '_blank');
+        });
+        document.getElementById('mac_2').addEventListener('click', () => {
+            window.open('https://update.code.visualstudio.com/1.89.1/darwin/stable', '_blank');
+        });
+        document.getElementById('mac_3').addEventListener('click', () => {
+            window.open('https://update.code.visualstudio.com/1.89.1/darwin-arm64/stable', '_blank');
+        });
+        document.getElementById('linux_1').addEventListener('click', () => {
+            window.open('https://update.code.visualstudio.com/1.89.1/linux-deb-x64/stable', '_blank');
+        });
+        document.getElementById('linux_2').addEventListener('click', () => {
+            window.open('https://update.code.visualstudio.com/1.89.1/linux-rpm-x64/stable', '_blank');
+        });
+        document.getElementById('linux_3').addEventListener('click', () => {
+            window.open('https://update.code.visualstudio.com/1.89.1/linux-x64/stable', '_blank');
+        });
+        document.getElementById('linux_4').addEventListener('click', () => {
+            window.open('https://code.visualstudio.com/docs/supporting/faq#_previous-release-versions', '_blank');
+        });
+        document.getElementById('linux_5').addEventListener('click', () => {
+            window.open('https://update.code.visualstudio.com/1.89.1/linux-snap-x64/stable', '_blank');
+        });
+        document.getElementById('instagram_link').addEventListener('click', () => {
+            window.open('https://www.instagram.com/etsrayy', '_blank');
+        });
+        document.getElementById('github_link').addEventListener('click', () => {
+            window.open('https://github.com/etsryn', '_blank');
+        });
+        document.getElementById('linkedin_link').addEventListener('click', () => {
+            window.open('https://www.linkedin.com/in/rayyan-ashraf/', '_blank');
+        });
+        document.getElementById('leetcode_link').addEventListener('click', () => {
+            window.open('https://leetcode.com/u/RayyanAshraf', '_blank');
+        });
+        document.getElementById('twitter_link').addEventListener('click', () => {
+            window.open('https://twitter.com/RayyanAshr90787', '_blank');
+        });
+    </script>
+    <!-- ~~~~~~~~~~~~~~~~ Incrementor ~~~~~~~~~~~~~~~~~~~ -->
+    <script>
+        $(document).ready(function(){
+            // Function to animate the counter
+            function animateCounter(selector, target) {
+                $({countNum: $(selector).text()}).animate({countNum: target}, {
+                    duration: 2000,
+                    easing: 'linear',
+                    step: function() {
+                        $(selector).text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $(selector).text(target);
+                    }
+                });
+            }
+            animateCounter('#run1', 250);
+            animateCounter('#run2', 336);
+            animateCounter('#run3', 500);
+        });
+    </script>
+    <!-- ~~~~~~~~~~~~~~~~ Back To Top ~~~~~~~~~~~~~~~~ -->
+    <script>
+        var backToTopButton = document.getElementById("back_to_top");
+  
+        backToTopButton.addEventListener("click", function() {
+            window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+            });
+        });
+    </script>
+    <script>
+        var backToTopButton = document.getElementById("copyright_link");
+  
+        backToTopButton.addEventListener("click", function() {
+            window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+            });
+        });
+      </script>
+    <!--  -->
+    <script>
+        document.getElementById('mailto_rysh').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default action of the link
+            window.open('mailto:ryshashraf@gmail.com', '_blank');
+        });
+
+        document.getElementById('mailto_rc').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default action of the link
+            window.open('mailto:rayyan.connects@gmail.com', '_blank');
+        });
+    </script>
+    <!-- TO STOP RIGHT CLICK (PREVENT FROM INSPECTING) -->
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

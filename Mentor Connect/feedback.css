@@ -1,0 +1,815 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header .container_main_for_header {
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adjust values as needed */
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+#logo {
+	background-color: #1f2937;
+	padding: 1.1vw;
+	margin-left: 2vw;
+}
+
+#logo p {
+	color: #d8b4fe;
+	font-size: 3vw;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+.container_top_for_header {
+	display: flex;
+	justify-content: space-between;
+	background-color: #1f2937;
+	height: 6vw;
+	padding: 0vw 2vw;
+}
+
+.navigation_right {
+	display: flex;
+	align-items: center;
+}
+
+.navigators ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.navigation_right .navigators .nav_link_buttons {
+	position: relative;
+}
+
+.navigation_right .navigators .nav_link_buttons::before,
+.navigation_right .navigators .nav_link_buttons::after {
+	content: "";
+	position: absolute;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	background-color: #9333ea;
+	transition: width 0.3s ease;
+}
+
+.navigation_right .navigators .nav_link_buttons::before {
+	left: 0;
+}
+
+.navigation_right .navigators .nav_link_buttons::after {
+	right: 0;
+}
+
+.navigation_right .navigators .nav_link_buttons:hover::before,
+.navigation_right .navigators .nav_link_buttons:hover::after {
+	width: 100%;
+}
+.navigation_right .navigators #color_change_item_8 {
+	width: 100%;
+	border-bottom: 2px solid #9333ea;
+}
+
+.navigation_right .navigators ul svg {
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	padding-top: 0.1vw;
+	cursor: pointer;
+	max-width: 1.5vw;
+}
+
+.nav_link_buttons {
+	margin-right: 1.1vw;
+	background: transparent;
+}
+
+.nav_link_buttons a {
+	text-decoration: none;
+	color: #fff;
+	padding: 0.65vw 1vw;
+	border-radius: 10px;
+	display: block;
+	font-size: 1.1vw;
+}
+
+.login_signup_buttons button {
+	padding: 0.65vw 1vw;
+	background-color: #c084fc; /* Matching theme color */
+	border: none;
+	border-radius: 10px;
+	margin-left: 1.1vw;
+	font-size: 1.1vw;
+	color: white; /* Text color */
+	cursor: pointer;
+	transition: 0.3s ease; /* Smooth transition */
+}
+
+.login_signup_buttons button:hover {
+	background-color: #a56cfd; /* Darker shade on hover */
+	transform: translateY(-2px); /* Move button slightly upwards */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+#separator_line {
+	width: 100%;
+	height: 0.08vh;
+	background-color: #fff;
+}
+
+.container_bottom_for_header {
+	background-color: #1f2937;
+	height: 2.5vw;
+	text-align: center;
+	padding: 0.7vw;
+}
+
+#live_running_updates {
+	background-color: #1f2937;
+	color: rgb(156 163 175);
+	font-size: 1.05vw;
+	font-weight: 500;
+	letter-spacing: 3px;
+}
+
+#menu_icon {
+	color: #d8b4fe; /* Icon color */
+	font-size: 2vw; /* Adjust icon size */
+	margin-right: 20px; /* Adjust spacing from other elements */
+	display: none;
+}
+
+.content_page_first {
+	background-color: #111827;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	padding-top: 8.55vw;
+}
+
+.division_content_page_first_left {
+	/* background-color: #111827; */
+	padding-left: 4vw;
+	padding-top: 7vw;
+	width: 55%;
+	height: 100%;
+}
+
+.division_content_page_first_right {
+	width: 45%;
+	height: 100%;
+	/* background-color: #111827; */
+}
+
+.content_page_first .division_content_page_first_left .heading_and_message h1 {
+	font-size: 4vw;
+	color: rgb(255, 255, 255, 0.8);
+}
+.content_page_first
+	.division_content_page_first_left
+	.heading_and_message
+	h1
+	span {
+	color: rgba(54, 180, 226, 0.8);
+}
+.content_page_first .division_content_page_first_left .heading_and_message h2 {
+	padding: 4vw;
+	margin-top: 4vw;
+	line-height: 2.5vw;
+	box-shadow: -4px 4px 10px rgba(0, 0, 255, 0.2);
+	font-size: 1.5vw;
+	text-align: left;
+	color: rgb(156, 163, 175, 1);
+	transition: all 0.3s ease-in-out;
+}
+.content_page_first
+	.division_content_page_first_left
+	.heading_and_message
+	h2:hover {
+	box-shadow: -4px 4px 10px rgba(0, 0, 255, 0.5);
+	cursor: pointer;
+}
+/* Drop-Down */
+#nav_options {
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	width: 15vw;
+	height: auto;
+	padding: 1vw;
+	background-color: #111827;
+	z-index: 3;
+	right: 5.8vw;
+	flex-direction: column;
+	list-style: none;
+	border: 1px solid white;
+}
+#header_of_option_drop {
+	display: flex;
+	flex-direction: row;
+}
+
+#header_of_option_drop p {
+	padding-left: 1vw;
+	padding-right: 1vw;
+	color: #fff;
+	padding-top: 0.5vw;
+}
+
+#nav_options #header_of_option_drop svg {
+	cursor: pointer;
+	color: #fff;
+	width: 2vw;
+}
+#horizontal_line_in_option_drop {
+	width: 100%;
+	height: 0.1vw;
+	background-color: #fff;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+}
+
+#nav_options button {
+	border: none;
+}
+
+#nav_options .nav_link_buttons:hover {
+	box-shadow: 0px 0px 5px 0.1px #9333ea;
+}
+
+
+
+#nav_options a {
+	font-size: 1.1vw;
+}
+
+#nav_options #header_of_option_drop p {
+	font-size: 1.1vw;
+}
+
+/* Feedback form */
+.container {
+	position: relative; /* Ensure absolute positioning of placeholders */
+	width: 26vw; /* 26vw *is 400px */
+	margin: 3vw auto; /* 3vw *is 50px */
+	padding: 2.3vw 1vw;
+	border-radius: 10px;
+	background-color: rgb(54, 120, 123, 0.9);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	animation: slideIn 2s ease-in-out, changeColor 1s infinite;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+	font-size: 1.7vw;
+	color: #111827;
+	font-weight: bolder;
+	text-transform: uppercase;
+	transition: all 0.1s ease-in-out;
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes changeColor {
+	0% {
+		background-color: rgba(54, 120, 123, 0.9);
+	}
+	50% {
+		background-color: rgba(63, 131, 134, 0.7);
+	}
+	100% {
+		background-color: rgba(54, 120, 123, 0.9);
+	}
+}
+input[type="text"],
+input[type="tel"],
+textarea {
+	width: 22vw; /* 100% *is 22vw */
+	padding: 1vw; /* 15px *is 1vw */
+	margin: 0.8vw 0; /* 10px *is 0.8vw */
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #333;
+	transition: border-color 0.3s;
+	font-size: 0.8vw;
+}
+textarea {
+	height: 7vw;
+}
+input[type="text"]:hover,
+input[type="tel"]:hover,
+textarea:hover {
+	border-color: #666;
+}
+
+input[type="text"]:focus::placeholder,
+input[type="tel"]:focus::placeholder,
+textarea:focus::placeholder {
+	opacity: 0.5;
+	transition: opacity 0.3s ease-out;
+	transform: translateY(-50%);
+}
+
+input[type="submit"] {
+	width: 22vw; /* 100% *is 22vw */
+	padding: 1vw; /* 15px *is 1vw */
+	border: none;
+	border-radius: 5px;
+	background-color: #4caf50;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.2vw;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+	background-color: #45a049;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+	#nav_options {
+		width: 20%;
+		height: auto;
+		right: 0;
+	}
+
+	#header_of_option_drop p,
+	#nav_options a {
+		font-size: 1.1vw;
+	}
+	#header_of_option_drop {
+		align-items: center;
+		flex-direction: column-reverse;
+		height: auto;
+	}
+	#nav_options #header_of_option_drop svg {
+		width: 2vw;
+	}
+}
+
+/* FORM SUBMITTER AND LOADER */
+
+#loading-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999; /* Ensure the overlay appears on top of other elements */
+}
+
+.loading-spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60px;
+	height: 60px;
+}
+
+.loading-spinner::before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 6px solid rgba(255, 255, 255, 0.3);
+	border-top-color: #4caf50; /* Green color */
+	border-radius: 50%;
+	animation: spin 1s linear infinite; /* Rotate animation */
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#success-message {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #4caf50; /* Green background */
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Soft shadow */
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Use a clean and modern font */
+	font-size: 18px; /* Larger font size */
+	text-align: center; /* Center the text */
+	max-width: 80%; /* Limit width for readability */
+	line-height: 1.6; /* Improved line height for better readability */
+}
+
+
+
+/* 751 -> Maximum for Website Look */
+@media (min-width: 771px) and (max-width: 1536px) {
+
+}
+
+
+/* 501 -> 770 for Website-BigTablet Look */ 
+/* Hide The Navigation And Adjust The Size of DropDown Accordingly */
+/* Although 767.2 is Mid-Screen, But For Safety I am Taking 770px */
+@media (min-width: 483px) and (max-width: 770px) {
+	/* Hiding The Navigators */
+	.navigators {
+		display: none;
+	}
+
+	/* Hiding The Sign-In Buttons */
+	.login_signup_buttons {
+		display: none;
+	}
+
+	/* Showing The Menu Button */
+	#menu_icon {
+		display: block;
+		cursor: pointer;
+		font-size: 3vh;
+	}
+	/* Designing SignUp/SugnIn Buttons */
+	.dropdown_login_signup_buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 1vw;
+		margin-top: 1vw;
+	}
+	.dropdown_login_signup_buttons button {
+		padding: 1vw 1.5vw;
+		background-color: #c084fc;
+		border: none;
+		border-radius: 5px;
+		margin-left: 1.1vw;
+		font-size: 1.6vw;
+		font-family: cursive;
+		text-align: center;
+		justify-content: center;
+		color: white;
+		cursor: pointer;
+		transition: 0.3s ease;
+	}
+	.dropdown_login_signup_buttons button:hover {
+		background-color: #a56cfd;
+		transform: translateY(-2px);
+		box-shadow: -4 -4px 5px rgba(0, 0, 0, 1);
+	}
+	/* Designing DropDown Box Structure */
+	#nav_options {
+		position: absolute;
+		display: none;
+		flex-direction: column;
+		width: 34vw;
+		height: auto;
+		padding: 1vw;
+		background-color: #111827;
+		z-index: 3;
+		right: 4.9vw;
+		list-style: none;
+		border: 1px solid white;
+		border-radius: 5px;
+	}
+	#nav_options #header_of_option_drop {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 1vw;
+		padding-top: 1vw;
+		padding-bottom: 1vw;
+		font-family: cursive;
+	}
+	#nav_options #header_of_option_drop p {
+		font-size: 1.5vw;
+	}
+	#nav_options #header_of_option_drop svg {
+		width: 3vw;
+	}
+	#nav_options .nav_link_buttons a {
+		font-size: 2vw;
+		font-family: cursive;
+	}
+	/* Now Changing the Structure From Row to Column */
+	.content_page_first {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		/* gap: 1vw; */
+	}
+	/* Now Designing Each Sub-Part of The First Page's Left Content */
+	.division_content_page_first_left {
+		width: 100%;
+		height: 55vw;
+		text-align: center;
+		align-items: center;
+	}
+	.division_content_page_first_right {
+		width: 100%;
+		height: 100%;
+	}
+
+	.content_page_first .division_content_page_first_left .heading_and_message #h_1 {
+		font-size: 7vw;
+	}
+	.content_page_first .division_content_page_first_left .heading_and_message #h_2 {
+		width: 70vw;
+		margin: 12vw auto;
+		font-size: 2.5vw;
+		text-align: center;
+		line-height: 4vw;
+	}
+	/* Now Designing Each Sub-Part of The First Page's Right Content [The Feedback Form Structure] */
+	.content_page_first .division_content_page_first_right {
+		
+	}
+	.content_page_first .division_content_page_first_right .container {
+		width: 60vw;
+		height: 80vw;
+	}
+	.content_page_first .division_content_page_first_right .container h2 {
+		font-size: 4vw;
+		padding-top: 2vw;
+		padding-bottom: 2vw;
+		letter-spacing: 1.2vw;
+		text-shadow: -4px 4px 10px rgb(17, 24, 39, 0.6);
+	}
+	/* Now Designing Each Sub-Part of The First Page's Right Content [The Feedback Form Content] */
+	input[type="text"], input[type="tel"], textarea {
+		width: 90%;
+		height: 10vw;
+		padding: 3vw;
+		margin: 0.8vw 0;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background-color: #fff;
+		color: #333;
+		transition: border-color 0.3s;
+		font-size: 2.2vw;
+	}
+	textarea {
+		height: 20vw;
+	}
+	input[type="text"]:hover, input[type="tel"]:hover, textarea:hover {
+		border-color: #666;
+	}
+
+	input[type="text"]:focus::placeholder, input[type="tel"]:focus::placeholder, textarea:focus::placeholder {
+		opacity: 0.5;
+		transform: translateY(-100%);
+		transition: all 0.3s ease-out;
+	}
+
+	input[type="submit"] {
+		width: 90%;
+
+		padding: 3vw;
+		border: none;
+		border-radius: 5px;
+		background-color: #4caf50;
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 2.5vw;
+		cursor: pointer;
+		transition: background-color 0.3s;
+	}
+
+	input[type="submit"]:hover {
+		background-color: #45a049;
+	}
+}
+
+
+/* 361 -> 482 for Tablet Look */
+
+/* Minimum That Can be Attained is 483px or say 501px */
+
+/* 0 -> 360 for Mobile Look + 360 to 483 Tablet Look COMBINED */
+@media (max-width: 483px) {
+	html, body {
+        width: auto;
+        height: 100%;
+        margin: 0; /* Remove default margins */
+        padding: 0; /* Remove default padding */
+        /* overflow-x: hidden; Optional: hide horizontal scrollbar */
+    }
+    .navigators {
+        display: none;
+    }
+    
+    .login_signup_buttons {
+        display: none;
+    }
+    #menu_icon {
+        display: block;
+        cursor: pointer;
+        font-size: 3vh;
+    }
+    .container_main_for_header {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        justify-content: center;
+    }
+    .container_bottom_for_header {
+        background-color: #1F2937;
+        height: 5.5vw;
+        text-align: center;
+        padding-top: 1.5vw;
+    }
+    .container_top_for_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1F2937;
+        height: 15vw;
+        padding: 0 20px;
+    }
+    #live_running_updates {
+        font-size: 2.5vw;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    #logo p {
+        color: #D8B4FE;
+        font-size: 7vw;
+    }
+    #separator_line {
+		height: 0.13vh;
+	}
+	/* Designing SignUp/SugnIn Buttons */
+	.dropdown_login_signup_buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 2vw;
+		margin-top: 1vw;
+		margin-bottom: 1vw;
+		margin-right: 1vw;
+	}
+	.dropdown_login_signup_buttons button {
+		padding: 1.8vw 2.2vw;
+		background-color: #c084fc;
+		border: none;
+		border-radius: 5px;
+		margin-left: 1.1vw;
+		font-size: 3.5vw;
+		font-family: 'Times New Roman', Times, serif;
+		text-align: center;
+		justify-content: center;
+		color: white;
+		cursor: pointer;
+		transition: 0.3s ease;
+	}
+	.dropdown_login_signup_buttons button:hover {
+		background-color: #a56cfd;
+		transform: translateY(-2px);
+		box-shadow: -4 -4px 5px rgba(0, 0, 0, 1);
+	}
+	/* Designing DropDown Box Structure */
+	#nav_options {
+		position: absolute;
+		display: none;
+		flex-direction: column;
+		width: 55vw;
+		height: auto;
+		padding: 1vw;
+		background-color: #111827;
+		z-index: 3;
+		right: 4.9vw;
+		list-style: none;
+		border: 1px solid white;
+		border-radius: 5px;
+	}
+	#nav_options #header_of_option_drop {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 1vw;
+		padding-top: 1vw;
+		padding-bottom: 1vw;
+		font-family: cursive;
+	}
+	#nav_options #header_of_option_drop p {
+		font-size: 2.5vw;
+	}
+	#nav_options #header_of_option_drop svg {
+		width: 6vw;
+	}
+	#nav_options .nav_link_buttons a {
+		font-size: 4vw;
+		padding: 2vw 0vw;
+		margin: 1vw;
+		font-family: 'Times New Roman', Times, serif;
+	}
+	/* Now Changing the Structure From Row to Column */
+	.content_page_first {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 15vw;
+	}
+	/* Now Designing Each Sub-Part of The First Page's Left Content */
+	.division_content_page_first_left {
+		width: 100%;
+		height: 55vw;
+		text-align: center;
+		align-items: center;
+	}
+	.division_content_page_first_right {
+		width: 100%;
+		height: 100%;
+	}
+
+	.content_page_first .division_content_page_first_left .heading_and_message #h_1 {
+		margin-top: 10vw;
+		font-size: 7vw;
+	}
+	.content_page_first .division_content_page_first_left .heading_and_message #h_2 {
+		width: 80vw;
+		margin: 12vw auto;
+		font-size: 2.5vw;
+		text-align: center;
+		line-height: 4vw;
+	}
+	/* Now Designing Each Sub-Part of The First Page's Right Content [The Feedback Form Structure] */
+	.content_page_first .division_content_page_first_right {
+		
+	}
+	.content_page_first .division_content_page_first_right .container {
+		width: 70vw;
+		height: 93vw;
+	}
+	.content_page_first .division_content_page_first_right .container h2 {
+		font-size: 4.2vw;
+		padding-top: 2vw;
+		padding-bottom: 2vw;
+		letter-spacing: 1.2vw;
+		text-shadow: -4px 4px 10px rgb(17, 24, 39, 0.6);
+	}
+	/* Now Designing Each Sub-Part of The First Page's Right Content [The Feedback Form Content] */
+	input[type="text"], input[type="tel"], textarea {
+		width: 90%;
+		height: 10vw;
+		padding: 3vw;
+		margin: 2vw 0;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background-color: #fff;
+		color: #333;
+		transition: border-color 0.3s;
+		font-size: 2.2vw;
+	}
+	textarea {
+		height: 20vw;
+	}
+	input[type="text"]:hover, input[type="tel"]:hover, textarea:hover {
+		border-color: #666;
+	}
+
+	input[type="text"]:focus::placeholder, input[type="tel"]:focus::placeholder, textarea:focus::placeholder {
+		opacity: 0.5;
+		transform: translateY(-100%);
+		transition: all 0.3s ease-out;
+	}
+	input[type="submit"] {
+		width: 90%;
+		margin: 2vw 0;
+		padding: 3vw;
+		border: none;
+		border-radius: 5px;
+		background-color: #4caf50;
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 2.5vw;
+		cursor: pointer;
+		transition: background-color 0.3s;
+	}
+
+	input[type="submit"]:hover {
+		background-color: #45a049;
+	}
+}

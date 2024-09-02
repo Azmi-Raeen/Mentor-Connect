@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CwR > Project</title>
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js"></script>
+    <!-- Online CSS Properties -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./Images_Index/favicon.ico">
+</head>
+<body id="main_body">
+    <div id="notify-message" style="opacity: 0;">
+        <p>In Dark Theme : White colored text has been blurred for your eyes' comfort</p>
+    </div>
+    <!-- Navigation Bar Starts -->
+    <header>
+        <div class="container_main_for_header">
+            <div class="container_top_for_header" id="color_change_item_1">
+                <div id="logo">
+                    <a href="index.html"><p id="color_change_item_2">Tech Fossils</p></a>
+                </div>
+                <div class="navigation_right">
+                    <nav class="navigators">
+                        <ul>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_3">Tech Stack</a></li>
+                            <li class="nav_link_buttons"><a href="project.html" id="color_change_item_4">Project</a></li>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_5">Community</a></li>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_6">Researches</a></li>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_7">Know Me</a></li>
+                            <li class="nav_link_buttons"><a href="feedback.html" id="color_change_item_8">Feedback</a></li>
+                            <li class="nav_link_buttons"><a href="#" id="color_change_item_9">Your Corner</a></li>
+                            <svg id="svgIcon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="md:hidden w-4 text-purple-700 mt-1 ml-2 cursor-pointer dark:text-white" height="28" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></svg>
+                        </ul>
+                    </nav>
+                    <div class="login_signup_buttons">
+                        <button>Log In</button>
+                        <button>Sign Up</button>
+                    </div>
+                    <div class="menu_and_option">
+                        <div id="menu_icon">
+                            <i class="ri-menu-3-fill" id="menu_3_icon"></i>
+                        </div>
+                        <div id="nav_options" style="display: none;">
+                            <div id="header_of_option_drop">
+                                <p>Mode : Light / Dark</p>
+                                <svg id="svgIcon_" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="md:hidden w-4 text-purple-700 mt-1 ml-2 cursor-pointer dark:text-white" height="28" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></svg>
+                            </div>
+                            <div id="horizontal_line_in_option_drop"></div>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_3">Tech Stack</a></button>
+                            <button class="nav_link_buttons"><a href="project.html" id="color_change_item_4">Project</a></button>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_5">Community</a></button>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_6">Researches</a></button>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_7">Know Me</a></button>
+                            <button class="nav_link_buttons"><a href="feedback.html" id="color_change_item_8">Feedback</a></button>
+                            <button class="nav_link_buttons"><a href="#" id="color_change_item_9">Your Corner</a></button>
+                            <div id="signbtn" class="dropdown_login_signup_buttons">
+                                <button>Log In</button>
+                                <button>Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="separator_line"></div>
+            <div class="container_bottom_for_header" id="color_change_item_10">
+                <div id="live_running_updates">
+                    <marquee scrollamount="11"><p>About to start a project on Data Science using Python, Interested viewers contact me.</p></marquee>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navigation Bar Ends -->
+
+    <!-- Page 1 Content Starts -->
+    <div class="content_page_first" id="color_change_item_11">
+
+        <!-- Card 1 -->
+        <div id="project_listed_number_1" class="project_list_common_design"> <!-- flex-col-->
+            <div class="top_container" id="top_container_1"> <!-- flex-row -->
+                <div class="top_left_division"> <!-- flex-row -->
+                    <div id="project_card_heading_container">
+                        <h1 id="project_id_1" class="card_heading">Movie Ticket Reservation System - MTRS</h1>
+                    </div>
+                    <div id="description_id_1" class="description_container_common_design">
+                        <p id="paragraph_id_1" class="paragraph_common_design">
+                            Movie Ticket Reservation System is a console based C++ program spanning upto a 10,000+ lines, managed by 162 functions ensuring robustness, through extensive testing. Talking about test cases you will be satisfied enough to know that even the method which intakes the date on which the ticket is to be booked has gone through 2800+ test cases.<br />
+                            
+                            By name, this project sound so newish and beginner touching, but reality is that this program touches, and is cross-examined through any unexpected user input, it has the capability to tackle almost every situation whether it is because of user's fault or of some smart-ones trying to find the loop holes.<br />
+
+                            Created a comprehensive project, featuring account creation, ticket printing, seat selection, ticket class updates, a point earning module and much more !
+                        </p>
+                    </div>
+                </div>
+                <div class="top_right_division">
+                    <button class="repo_download_button" id="repo_download_mtrs_temp">Download<br />Project</button>
+                </div>
+            </div>
+            <div class="bottom_full_no_division" id="id_bottom_full_no_division_1">
+                <div id="bottom_full_button_container">
+                    <button id="mtrs_repo">To GitHub</button></a>
+                    <button id="mtrs_project"><span>Explore more</span></button>
+                    <button class="repo_download_button" id="repo_download_mtrs">Download Project</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div id="project_listed_number_2" class="project_list_common_design reveal">
+            <div class="top_container" id="top_container_2">
+                <div class="top_left_division">
+                    <div id="project_card_heading_container">
+                        <h1 id="project_id_2" class="card_heading">To Do Task Manager - TDTM</h1>
+                    </div>
+                    <div id="description_id_2" class="description_container_common_design">
+                        <p id="paragraph_id_2" class="paragraph_common_design">
+                            This Python project is a security application that combines features such as text-to-speech, camera activation on incorrect password attempts, and task management. <br /><br />
+
+                            It utilizes libraries like `<i>pyttsx3</i>` for <b>text-to-speech</b>, `<i>cv2</i>` for <b>camera access</b>, and `<i>tkinter</i>` for <b>GUI</b>.<br /><br />
+
+                            Upon execution, it initializes setups, creates a password-protected interface, and allows users to manage tasks through functions like adding, removing, marking as completed, and clearing tasks.<br /><br />
+                            Additionally, it includes functionality to handle PDF encryption and decryption using libraries like `PyPDF2` and `fitz`.
+                        </p>
+                    </div>
+                </div>
+                <div class="top_right_division">
+                    <button class="repo_download_button" id="repo_download_tdtm_temp">Download<br />Project</button>
+                </div>
+            </div>
+
+            <div class="bottom_full_no_division" id="id_bottom_full_no_division_2">
+                <div id="bottom_full_button_container">
+                    <button id="tdtm_repo">To GitHub</button>
+                    <button id="tdtm_project"><span>Explore more</span></button>
+                    <button class="repo_download_button" id="repo_download_tdtm">Download Project</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div id="project_listed_number_3" class="project_list_common_design reveal">
+            <div class="top_container" id="top_container_3">
+                <div class="top_left_division">
+                    <div id="project_card_heading_container">
+                        <h1 id="project_id_3" class="card_heading">YouTube Clone - (Semi Working Model)</h1>
+                    </div>
+                    <div id="description_id_3" class="description_container_common_design">
+                        <p id="paragraph_id_3" class="paragraph_common_design">
+                            This project aims to replicate the design and functionality of YouTube's interface. Using HTML, CSS and JavaScript only, the project mimics key features of YouTube such as video thumbnails, video playback.<br /><br />
+
+                            It likely includes components such as flexbox for layout, event listeners for user interactions, and iframe for fetching and displaying video content. Overall, it offers a hands-on experience in front-end web development while exploring modern web technologies and design principles.<br /><br />
+
+                            PS: Since it was my first project on web-development which was years back at learning stage, so concepts like responsiveness, real-time video renderring and other complex features haven't beed addressed.
+                        </p>
+                    </div>
+                </div>
+                <div class="top_right_division">
+                    <button class="repo_download_button" id="repo_download_ytc_temp">Download<br />Project</button>
+                </div>
+            </div>
+
+            <div class="bottom_full_no_division" id="id_bottom_full_no_division_3">
+                <div id="bottom_full_button_container">
+                    <button id="ytc_repo">To GitHub</button>
+                    <button id="ytc_project"><span>Explore more</span></button>
+                    <button id="ytc_web">See Website Live</button>
+                    <button class="repo_download_button" id="repo_download_ytc">Download Project</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div id="project_listed_number_4" class="project_list_common_design reveal">
+            <div class="top_container" id="top_container_4">
+                <div class="top_left_division">
+                    <div id="project_card_heading_container">
+                        <h1 id="project_id_4" class="card_heading">Rayyan Digital Finance Corporation - RDFC</h1>
+                    </div>
+                    <div id="description_id_4" class="description_container_common_design">
+                        <p id="paragraph_id_4" class="paragraph_common_design">
+                            This is a Java based UI program, which seamlessly simulates the netbanking facility which we often see nowadays, additionally it includes features from different sectors of digital finance market like stocks, FDs SIPs and more.<br /><br />
+
+                            A program which is not even completed 20% of what resultion has been taken and already ranging over 10,000+ lines, ensuring smooth transition, security, database access protocols, data abstraction, concept of inheritence, user-friendly and easy to set-up.<br /><br />
+
+                            Project still in progress, will be updating soon...
+                        </p>
+                    </div>
+                </div>
+                <div class="top_right_division">
+                    <button class="repo_download_button" id="repo_download_rdfc_temp">Download<br />Project</button>
+                </div>
+            </div>
+
+            <div class="bottom_full_no_division" id="id_bottom_full_no_division_4">
+                <div id="bottom_full_button_container">
+                    <button id="rdfc_repo">To GitHub</button>
+                    <button id="rdfc_project"><span>Explore more</span></button>
+                    <button class="repo_download_button" id="repo_download_rdfc">Download Project</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div id="project_listed_number_5" class="project_list_common_design reveal">
+            <div class="top_container" id="top_container_5">
+                <div class="top_left_division">
+                    <div id="project_card_heading_container">
+                        <h1 id="project_id_5" class="card_heading">Rayyan Digital Space - RDS<br /><font style="font-size: 1.5vw; margin-left: 50vw; text-align: center; font-style: italic;">(website, on which you are)</font></h1>
+                    </div>
+                    <div id="description_id_5" class="description_container_common_design">
+                        <p id="paragraph_id_5" class="paragraph_common_design">
+                            This website is intended for my personal usage, through which i will be having a customised platform to interact with you all in a much more effective manner.<br />
+                            
+                            Of-course LinkedIn and various platform provides wide interface and reach to showcase yourselves, but it's structure and rule-regulations can't be surpassed, leading to be in restricted environment<br />
+
+                            For clarity, I am not a Web-Developer, not even keen to get into until it colides in my path, still i've developed this website with my upto-date knowledge about Web-Development, so you might see some glithces, hoping for your <span id="rds_feedback" style="cursor: pointer;">feedback</span> and cooperation for it.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="top_right_division">
+                    <button class="repo_download_button" id="repo_download_rds_temp">Can't Download<br />This Project</button>
+                </div>
+            </div>
+
+            <div class="bottom_full_no_division" id="id_bottom_full_no_division_5">
+                <div id="bottom_full_button_container">
+                    <button id="rds_repo">To GitHub</button>
+                    <button id="rds_project"><span>Explore more</span></button>
+                    <button id="rds_web">Home Page</button>
+                    <button class="repo_download_button" id="repo_download_rds">Can't Download This Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page 1 Content Ends -->
+
+    <!-- Below JavaScript Code is to Hide Dropdown Menu when user clicks anywhere except for that menu button -->
+    <script language="JavaScript">
+        document.onclick = myClickHandler;
+        function myClickHandler(event) {
+            var clickedElement = event.target
+            var isMenuIconClicked = clickedElement.id === 'menu_icon' || clickedElement.closest('#menu_icon');
+            if (!isMenuIconClicked) {
+                document.getElementById("nav_options").style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Removes Notify Panel -->
+    <!-- <script language="JavaScript">
+        let notifyMessage = document.getElementById('notify-message');
+        setTimeout(() => {
+            notifyMessage.style.opacity = '1';
+            notifyMessage.style.transition = 'all 0.5s';
+        }, 100);
+        setTimeout(() => {
+            notifyMessage.querySelector('p').textContent = 'Thank You';
+        }, 6200);
+        setTimeout(() => {
+            notifyMessage.style.opacity = '0';
+            notifyMessage.style.transition = 'all 1s';
+        }, 8200);
+    </script> -->
+
+    <!-- Redirects -->
+    <script>
+        document.getElementById('mtrs_repo').addEventListener('click', () => {
+            window.open('https://github.com/etsryn/Movie-Ticket-Reservation-System-MTRS.git', '_blank');
+        });
+        document.getElementById('tdtm_repo').addEventListener('click', () => {
+            window.open('https://github.com/etsryn/To-Do-Task-Manager-TDTM.git', '_blank');
+        });
+        document.getElementById('ytc_repo').addEventListener('click', () => {
+            window.open('https://github.com/etsryn/YouTube_Clone.git', '_blank');
+        });
+        document.getElementById('ytc_web').addEventListener('click', () => {
+            window.open('https://etsryn.github.io/YouTube_Clone/', '_blank');
+        });
+        document.getElementById('rdfc_repo').addEventListener('click', () => {
+            window.open('https://github.com/etsryn/Rayyan-Digital-Finance-Corporation-RDFC.git', '_blank');
+        });
+        document.getElementById('rds_repo').addEventListener('click', () => {
+            window.open('https://github.com/etsryn/rayyandigitalspace.git', '_blank');
+        });
+        document.getElementById('rds_web').addEventListener('click', () => {
+            window.open('https://etsryn.github.io/rayyandigitalspace/', '_blank');
+        });
+        document.getElementById('rds_feedback').addEventListener('click', () => {
+            window.location.href = 'https://etsryn.github.io/rayyandigitalspace/feedback.html';
+        });
+    </script>
+</body>
+</html>
